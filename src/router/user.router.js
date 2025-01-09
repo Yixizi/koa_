@@ -6,4 +6,6 @@ const userRouter = new KoaRouter({ prefix: '/users' });
 
 userRouter.post('/', verifyUser, handlePassword, UserController.create);
 
+userRouter.get('/avatar/:userId', UserController.showAvatarImage);
+
 module.exports = userRouter;
